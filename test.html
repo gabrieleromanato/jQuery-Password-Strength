@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Password Strength</title>
+<meta charset="utf-8" />
+<style type="text/css" media="screen">
+#form {
+	margin: 2em auto;
+	width: 400px;
+	font: 90% Arial, sans-serif;
+}
+
+#form label {
+	display: block;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+#form #pass {
+	display: block;
+	font: 1.2em Arial, sans-serif;
+	padding: 6px 0;
+	width: 220px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	background: #f9f9f9;
+	margin-bottom: 5px;
+	box-shadow: inset 1px 1px 1px #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<form action="#" method="post" id="form">
+	<div>
+		<label for="pass">Password:</label>
+		<input type="password" name="pass" id="pass" />
+		<div id="passstrength"></div>
+	</div>
+</form>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.passwordstrength.js"></script>
+<script type="text/javascript">
+$(function() {
+
+	$('#pass').passwordStrength();
+
+});
+</script>
+
+</body>
+</html>
